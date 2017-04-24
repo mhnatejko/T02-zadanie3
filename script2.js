@@ -18,9 +18,7 @@ fechy = function(url, success, failure){
 
 
 ///////
-
-button.addEventListener("click", function(e){
-    fechy(
+fechy(
         "https://jsonplaceholder.typicode.com/users", function(data){
             console.log("Sukces");
             output.textContent = data;
@@ -28,5 +26,4 @@ button.addEventListener("click", function(e){
         function(err){
             console.log("Blad");
             console.log(err.message)
-        })
-}, false)
+        });
